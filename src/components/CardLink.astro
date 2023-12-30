@@ -1,0 +1,12 @@
+---
+interface Props {
+  link: string;
+  label?: string;
+}
+
+const { link, label = "mehr ..." } = Astro.props;
+---
+
+<div class="py-3">
+  <a href={link} class="underline text-indigo-800">{label}</a>
+</div>

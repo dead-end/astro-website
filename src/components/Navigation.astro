@@ -1,0 +1,23 @@
+---
+const items = [
+  { link: "/", label: "Home" },
+  { link: "/nachhilfe", label: "Nachhilfe" },
+  { link: "/dozentin", label: "Dozentin" },
+  { link: "/kontakt", label: "Kontakt" },
+  { link: "/impressum", label: "Impressum" },
+  { link: "/haftung", label: "Haftungsausschluss" },
+  { link: "/datenschutz", label: "Datenschutz" },
+];
+---
+
+<nav class="bg-indigo-800">
+  <ul class="flex">
+    {
+      items.map((item) => (
+        <li class=" hover:bg-indigo-600 font-semibold px-2 py-3">
+          <a href={item.link}>{item.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

@@ -1,12 +1,52 @@
 ---
 import Card from "../components/Card.astro";
+import CardHeader from "../components/CardHeader.astro";
+import CardLink from "../components/CardLink.astro";
+import Ul from "../components/Ul.astro";
 import Layout from "../layouts/Layout.astro";
+
+import myImage from "../assets/bezous.jpg";
+import { Image } from "astro:assets";
 ---
 
-<Layout title="Welcome to Astro.">
-  <div class="example">Test</div>
-  <h1>Welcome to <span class="text-xl font-bold">Astro</span></h1>
-  <Card>
-    <p>test</p>
-  </Card>
+<Layout title="Mathematik und EDV Unterricht">
+  <div class="pt-6 px-6">
+    <h4 class="text-2xl font-extrabold py-4 border-b">Meine Person</h4>
+    <div class="grid grid-cols-3 gap-4 pt-6">
+      <p class="col-span-2">
+        Ich habe im Jahr 2007 mein Studium <span class="italic"
+          >Mathematik mit Nebenfach Informatik</span
+        > an der Universität Hannover mit dem Abschluss Bachelor of Science
+        abgeschlossen und mehrere Jahre als Dozentin für Mathematik und EDV in
+        der Erwachsenenbildung gearbeitet. Seit dem Jahr 2006 bin ich als
+        freiberufliche Mathematiklehrerin tätig und gebe seit der Zeit
+        Nachhilfeunterricht für Schüler aller Klassen und Studenten.
+      </p>
+      <Image class="rounded-lg" src={myImage} width={200} alt="Daria Bezous" />
+    </div>
+  </div>
+  <div class="flex justify-evenly py-6">
+    <Card>
+      <CardHeader label="Honorardozentin" />
+      <Ul>
+        <li>mehrjährige Erfahrung in der Erwachsenenbildung</li>
+        <li>Kurse für Mathematik und EDV</li>
+        <li>Krankheits- oder Schwangerschaftsvertretungen</li>
+      </Ul>
+      <CardLink link="dozentin" />
+    </Card>
+
+    <Card>
+      <CardHeader label="Nachhilfe" />
+      <Ul>
+        <li>qualifizierte Nachhilfe von ausgebildeter Mathematikerin</li>
+        <li>alle Klassen von der Grundschule bis zum Abitur</li>
+        <li>Auffrischung und Unterstützung für Studenten</li>
+        <li>Prüfungsvorbereitungen</li>
+        <li>Hausaufgabenhilfe</li>
+        <li>individueller Einzelunterricht oder Unterricht in Kleingruppen</li>
+      </Ul>
+      <CardLink link="nachhilfe" />
+    </Card>
+  </div>
 </Layout>
