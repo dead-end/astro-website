@@ -7,11 +7,12 @@ import Layout from "../layouts/Layout.astro";
 
 import myImage from "../assets/bezous.jpg";
 import { Image } from "astro:assets";
+import PageHeader from "../components/PageHeader.astro";
 ---
 
 <Layout title="Mathematik und EDV Unterricht">
   <div class="pt-6 px-6">
-    <h4 class="text-2xl font-extrabold py-4 border-b">Meine Person</h4>
+    <PageHeader label="Meine Person" />
     <div class="grid grid-cols-3 gap-4 pt-6">
       <p class="col-span-2">
         Ich habe im Jahr 2007 mein Studium <span class="italic"
